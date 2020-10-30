@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './app.css'
 import TaskForm from './taskform'
-import List_Task from './list_task'
+import ListTask from './list_task'
 import Button from './button'
 
 function App() {
@@ -48,7 +48,7 @@ function App() {
                                handleChangeDate={handleChangeDate}
                                description={t_description} 
                                date={t_date} />}
-      {!form_state && <List_Task value={list_tasks} />}
+      {!form_state && <ListTask value={list_tasks} />}
     </div>
   );
 }
