@@ -33,6 +33,8 @@ function App() {
     console.log(obj)
     set_list_tasks(list_tasks.concat(obj))
     set_form_state(!form_state)
+    setDescription('')
+    set_d_date('')
     event.preventDefault()
   }
 
