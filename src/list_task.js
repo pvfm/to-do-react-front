@@ -1,14 +1,14 @@
 import React from 'react'
-import Member_List from './member_list'
+import MemberList from './member_list'
 
-const List_Task = ({ value }) => {
+const ListTask = ({ value }) => {
   return (
     <div>
       <ul>
-        {value.map( (task, index)  => <Member_List key={index} description={task.t_description} t_date={task.t_date} />)}
+        {value.map( (task, index)  => <MemberList key={index} description={task.t_description} t_date={task.t_date} />)}
       </ul>
     </div>
   )
 }
 
-export default List_Task
+export default ListTask
