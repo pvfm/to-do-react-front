@@ -25,6 +25,7 @@ function App() {
   }
 
   function handleSubmit(event) {
+    event.preventDefault()
     alert('Formulario submetido')
     const obj = {
       t_description,
@@ -35,7 +36,6 @@ function App() {
     set_form_state(!form_state)
     setDescription('')
     set_d_date('')
-    event.preventDefault()
   }
 
   function handleClick() {

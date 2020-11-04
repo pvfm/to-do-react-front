@@ -12,3 +12,5 @@ const ListTask = ({ value }) => {
 }
 
 export default ListTask
+
+//duas listas uma com as concluidas e outra com a concluir 
