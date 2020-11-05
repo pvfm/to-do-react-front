@@ -1,9 +1,10 @@
 import React from 'react'
 import MemberList from './member_list'
 
-const ListTask = ({ value }) => {
+const ListTask = ({ value, name }) => {
   return (
     <div>
+      {name}
       <ul>
         {value.map( (task, index)  => <MemberList key={index} description={task.t_description} t_date={task.t_date} />)}
       </ul>

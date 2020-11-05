@@ -7,7 +7,11 @@ import Button from './button'
 function App() {
   
   const [ form_state, set_form_state ] = useState(false)
-  const [ list_tasks, set_list_tasks ] = useState([])
+  const [ list_tasks, set_list_tasks ] = useState([{
+      t_description: "Oi",
+      t_date: "22/10",
+      done: true
+  }])
   const [ t_description, setDescription ] = useState('')
   const [ t_date, set_d_date] = useState('')
 
@@ -29,7 +33,8 @@ function App() {
     alert('Formulario submetido')
     const obj = {
       t_description,
-      t_date
+      t_date,
+      done: false
     }
     console.log(obj)
     set_list_tasks(list_tasks.concat(obj))
@@ -50,9 +55,12 @@ function App() {
                                handleChangeDate={handleChangeDate}
                                description={t_description} 
                                date={t_date} />}
-      {!form_state && <ListTask value={list_tasks} />}
+      {!form_state && <ListTask name='Tarefas a fazer' value={list_tasks.filter((task) => task.done === false)} />}
+      {!form_state && <ListTask name='Tarefas feitas' value={list_tasks.filter((task) => task.done === true)} />}
     </div>
   );
 }
 
 export default App;
+//{list_tasks.reduce((previous, current) => current.done === true)}
+//list_tasks.reduce((previous, current) => current.done === false )
